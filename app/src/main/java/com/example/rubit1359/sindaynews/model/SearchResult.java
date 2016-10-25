@@ -9,6 +9,8 @@ import java.util.List;
  */
 
 public class SearchResult {
+
+    // General class to store the list of Model
     @SerializedName("docs")
     private List<Article> articles;
     public List<Article> getArticles() {return articles;}

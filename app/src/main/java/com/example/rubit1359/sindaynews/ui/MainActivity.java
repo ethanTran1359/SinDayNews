@@ -62,12 +62,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void search() {
+//        mSearchRequest.resetPage();
         pbLoading.setVisibility(View.VISIBLE);
-        fetchArticles(searchResult -> mArticleAdapter.setArticles(searchResult.getArticles()));
+        fetchArticles(new Listener() {
+            @Override
+            public void onResult(SearchResult searchResult) {
+                mArticleAdapter.setArticles(searchResult.getArticles());
+            }
+        });
 
     }
 
     private void searchMore() {
+//        mSearchRequest.nextPage();
         pbLoadMore.setVisibility(View.VISIBLE);
         fetchArticles(searchResult -> mArticleAdapter.addArticles(searchResult.getArticles()));
 

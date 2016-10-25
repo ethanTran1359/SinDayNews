@@ -13,6 +13,7 @@ import retrofit2.http.QueryMap;
  */
 
 public class SearchRequest implements Parcelable{
+    // Used to convert each
     private int page = 0;
     private String query;
     private String beginDate;

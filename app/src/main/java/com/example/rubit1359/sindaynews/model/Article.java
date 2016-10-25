@@ -13,6 +13,7 @@ import java.util.List;
  */
 
 public class Article implements Parcelable {
+    // Model class Article
     @SerializedName("snippet")
     private String snippet;
     @SerializedName("web_url")
